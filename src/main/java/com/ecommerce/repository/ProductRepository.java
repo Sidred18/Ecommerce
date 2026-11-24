@@ -2,8 +2,8 @@ package com.ecommerce.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.ecommerce.entity.Products;
+import com.ecommerce.entity.Product;
 
-public interface ProductRepository extends JpaRepository<Products, Long> {
+public interface ProductRepository extends JpaRepository<Product, Long> {
 
 }

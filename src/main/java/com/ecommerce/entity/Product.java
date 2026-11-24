@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table
-public class Products {
+public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long productId;

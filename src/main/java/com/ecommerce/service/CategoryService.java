@@ -7,9 +7,9 @@ import com.ecommerce.dto.CategoryResponse;
 
 public interface CategoryService {
 	CategoryResponse saveCategory(CategoryRequest categoryRequest);
-	String deleteCategory(int categoryId);
-	CategoryResponse getCategoryById(int categoryId);
+	String deleteCategory(Long categoryId);
+	CategoryResponse getCategoryById(Long categoryId);
 	List<CategoryResponse> getAllCategories();
-	CategoryResponse updateCategory(int categoryId, CategoryRequest categoryRequest);
+	CategoryResponse updateCategory(Long categoryId, CategoryRequest categoryRequest);
 	
 }

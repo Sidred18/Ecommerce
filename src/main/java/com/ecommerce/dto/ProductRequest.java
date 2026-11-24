@@ -1,12 +1,25 @@
 package com.ecommerce.dto;
 
+import jakarta.persistence.Column;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public class ProductRequest {
+	@NotNull(message = "Product name should not be null")
 	private String productName;
+	@NotNull(message = "product description shouldnt be null")
 	private String description;
-	private long price;
+	@NotNull(message = "price shouldnt be null")
+	@DecimalMin("0.1")
+	@Column(nullable = false)
+	private Long price;
+	@NotBlank
 	private String imageUrl;
-	private long stockQuantity;
-	private long categoryId;
+	@NotNull
+	private Long stockQuantity;
+	@NotNull
+	private Long categoryId;
 	public String getProductName() {
 		return productName;
 	}
